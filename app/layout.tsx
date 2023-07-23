@@ -1,3 +1,5 @@
+// not currently doing anything; can delete later (except the tailwind stuff)
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
