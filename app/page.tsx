@@ -1,5 +1,5 @@
-import Dashboard from "./components/Dashboard";
+import Link from "next/link";
 
 export default function Home() {
-  return <Dashboard />;
+  return <Link href="/dashboard">Go to Dashboard</Link>;
 }
