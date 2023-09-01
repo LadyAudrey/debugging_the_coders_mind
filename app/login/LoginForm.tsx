@@ -11,16 +11,16 @@ export function LoginForm() {
     setEmail(event.target.value);
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert(`Email: ${email}`);
     // OTP = one time password
-    supabase.auth.signInWithOtp({
+    const { data, error } = await supabase.auth.signInWithOtp({
       email: email,
       options: {
-        emailRedirectTo: "http://localhost:3000/dashboard",
+        emailRedirectTo: "http://localhost:3000/auth/callback",
       },
     });
+    console.log("Inside handleSubmit", data, error);
   }
 
   return (
