@@ -7,9 +7,7 @@ export async function middleware(req:NextRequest) {
         req, res
     })
 
-
     const {data:{user}} = await supabase.auth.getUser()
-
 
     if(user && req.nextUrl.pathname === "/"){
         return NextResponse.redirect(
@@ -36,6 +34,6 @@ export const config = {
     matcher:
     [
         "/",
-        "/dashboard"
+        "/dashboard/:path*"
     ]
 }
