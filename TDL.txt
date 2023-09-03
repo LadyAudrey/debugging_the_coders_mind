@@ -1,0 +1,3 @@
+create a function called SignOut
+    runs superbase.auth.SignOut
+    attach to UI
