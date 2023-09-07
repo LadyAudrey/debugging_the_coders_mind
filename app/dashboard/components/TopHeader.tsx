@@ -1,10 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import SignOutButton from "./SignOutButton";
 
 export default function TopHeader() {
-  async function handleSignout() {
-    const response = await fetch(`${process.env.NEXT_SITE_URL}api/signout`);
-  }
   return (
     <header className="flex  w-screen bg-dkGreen h-20 justify-between">
       <div className="h-20 w-1/6 relative">
@@ -17,7 +15,7 @@ export default function TopHeader() {
       <div className="h-20 w-1/6 relative">
         <Image fill src={"/assets/Logo.svg"} alt="logo" />
       </div>
-      <button onClick={handleSignout}>Sign Out</button>
+      <SignOutButton />
     </header>
   );
 }
