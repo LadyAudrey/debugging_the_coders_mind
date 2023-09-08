@@ -20,7 +20,6 @@ export function LoginForm() {
         emailRedirectTo: "http://localhost:3000/auth/callback",
       },
     });
-    console.log("Inside handleSubmit", data, error);
   }
 
   return (
