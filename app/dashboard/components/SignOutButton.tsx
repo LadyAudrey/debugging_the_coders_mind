@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 export default function SignOutButton() {
   const router = useRouter();
   function handleSignout() {
-    const response = fetch(`http://localhost:3000/api/signout`, {
+    const response = fetch(`${process.env.API_URL}api/signout`, {
       method: "POST",
     })
       .then((response) => {
