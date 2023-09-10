@@ -1,17 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
 export function LoginForm() {
   const [email, setEmail] = useState("");
+  const supabase = createClientComponentClient();
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     setEmail(event.target.value);
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert(`Email: ${email}`);
+    // OTP = one time password
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email: email,
+      options: {
+        emailRedirectTo: `https://${process.env.VERCEL_URL}auth/callback`,
+      },
+    });
   }
 
   return (

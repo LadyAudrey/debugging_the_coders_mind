@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import SignOutButton from "./SignOutButton";
 
 export default function TopHeader() {
   return (
@@ -14,6 +15,7 @@ export default function TopHeader() {
       <div className="h-20 w-1/6 relative">
         <Image fill src={"/assets/Logo.svg"} alt="logo" />
       </div>
+      <SignOutButton />
     </header>
   );
 }
