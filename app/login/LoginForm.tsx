@@ -17,7 +17,7 @@ export function LoginForm() {
     const { data, error } = await supabase.auth.signInWithOtp({
       email: email,
       options: {
-        emailRedirectTo: `${process.env.API_URL}auth/callback`,
+        emailRedirectTo: `https://${process.env.VERCEL_URL}auth/callback`,
       },
     });
   }
