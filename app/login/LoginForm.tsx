@@ -13,7 +13,7 @@ export function LoginForm() {
 
   console.log(
     "VercelURL: ",
-    `https://${process.env.NEXT_PUBLIC_URL}/auth/callback`
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/callback`
   );
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
