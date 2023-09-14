@@ -11,6 +11,11 @@ export function LoginForm() {
     setEmail(event.target.value);
   }
 
+  console.log(
+    "VercelURL: ",
+    `https://${process.env.NEXT_PUBLIC_URL}/auth/callback`
+  );
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     // OTP = one time password
