@@ -18,7 +18,7 @@ export function LoginForm() {
     if (process.env.NEXT_PUBLIC_VERCEL_ENV === "preview") {
       return `https://${process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL}/`;
     }
-    return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/`;
+    return "https://debugging-the-coders-mind.vercel.app/";
   }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
