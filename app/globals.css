@@ -9,11 +9,12 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    margin: 10vh;
+    margin: 5%;
+    /* TODO: figure out how to use TW variables for this stuff */
     background-color: #553700;
-    border-radius: 25%;
-    border-color: #CBEEE5;
-    width: 25%;
+    border: thick solid #7688A9;
+    border-radius: 5%;
+    width: 50%;
     height: 40vh;
     }
 

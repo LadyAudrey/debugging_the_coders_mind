@@ -11,6 +11,16 @@ export function LoginForm() {
     setEmail(event.target.value);
   }
 
+  function getPublicURL() {
+    if (process.env.NODE_ENV === "development") {
+      return `http://${process.env.NEXT_PUBLIC_VERCEL_URL}/`;
+    }
+    if (process.env.NEXT_PUBLIC_VERCEL_ENV === "preview") {
+      return `https://${process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL}/`;
+    }
+    return "https://debugging-the-coders-mind.vercel.app/";
+  }
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     // OTP = one time password
