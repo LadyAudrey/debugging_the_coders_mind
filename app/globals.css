@@ -10,9 +10,6 @@
     /* justify-content: center; */
     align-items: center;
     margin: 5%;
-    /* TODO: figure out how to use TW variables for this stuff */
-    background-color: #553700;
-    border: thick solid #7688A9;
     border-radius: 5%;
     width: 50%;
     height: 40vh;
@@ -20,6 +17,5 @@
 
 h2 {
     font-size: xx-large;
-    color: #CBEEE5;
     margin: 5vh;
 }

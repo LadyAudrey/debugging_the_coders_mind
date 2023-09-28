@@ -1,39 +1,34 @@
 import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function middleware(req:NextRequest) {
-    const res = NextResponse.next();
-    const supabase = createMiddlewareClient({
-        req, res
-    })
+export async function middleware(req: NextRequest) {
+  const res = NextResponse.next();
+  const supabase = createMiddlewareClient({
+    req,
+    res,
+  });
 
-    const {data:{user}} = await supabase.auth.getUser()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-    if(user && req.nextUrl.pathname === "/"){
-        return NextResponse.redirect(
-            new URL(
-                "/dashboard",
-                req.url
-            )
-        )
-    }
+  if (user && req.nextUrl.pathname === "/") {
+    return NextResponse.redirect(new URL("/dashboard", req.url));
+  }
 
-    if(!user && req.nextUrl.pathname !== "/"){
-        return NextResponse.redirect(
-            new URL(
-                "/login",
-                req.url
-            )
-        )
-    }
+  if (!user && req.nextUrl.pathname !== "/") {
+    return NextResponse.redirect(new URL("/login", req.url));
+  }
 
-    return res
+  return res;
 }
 
 export const config = {
-    matcher:
-    [
-        "/",
-        "/dashboard/:path*"
-    ]
-}
+  matcher: [
+    "/",
+    "/dashboard/:path*",
+    "/katas/:path*",
+    "/lessons/:path*",
+    "/notes/:path*",
+  ],
+};
