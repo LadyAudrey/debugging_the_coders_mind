@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    experimental: {
+        mdxRs: true,
+    }
+}
+// immediately instantiated function expression
+const withMDX = require("@next/mdx")();
 
-module.exports = nextConfig
+
+module.exports = withMDX(nextConfig)

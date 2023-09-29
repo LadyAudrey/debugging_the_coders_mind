@@ -1,22 +1,17 @@
 import React from "react";
-import IDEsandbox from "../IDEsandbox";
+import ControlBar from "./ControlBar";
 import Lesson from "./Lesson";
+import Notes from "../Notes";
+import IDEsandbox from "../IDEsandbox";
 
 export default function Lessons() {
   return (
-    <div className="text-white h-full flex flex-col">
-      <Lesson />
-      {/* this component has 4 buttons, each to change the time of media or to bring up the coding sandbox. The content changes based on which button is activated. It also has an expand toggl<div>page</div>e, to make the current media full screen */}
-      {/* <div>I hold the media, updating based on the buttons below</div> */}
-      {/* <div className="flex flex-row">
-        <button>
-          Vi<div>page</div>deo
-        </button>
-        <button>Slides</button>
-        <button>Transcript</button>
-        <button>Coding Sandbox</button>
-        <input className="toggle" type="checkbox" />
-      </div> */}
+    <div className="h-screen flex flex-col items-center bg-gradient-to-b from-cyan-900 to-emerald-950 text-white">
+      <ControlBar />
+      <div className="flex flex-row m-5 w-4/5 h-screen">
+        <Lesson />
+        <Notes />
+      </div>
     </div>
   );
 }

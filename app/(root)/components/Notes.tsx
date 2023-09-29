@@ -3,9 +3,7 @@ import React from "react";
 export default function Notes() {
   return (
     <div>
-      <h2 className="w-100 bg-emerald-950">
-        Can we just have a way to connect this to Obsidian?
-      </h2>
+      <div className="bg-orange-900 p-5border-cyan-200 rounded-lg border-4">Notes! goes here</div>
     </div>
   );
 }

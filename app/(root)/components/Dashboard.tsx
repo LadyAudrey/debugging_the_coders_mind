@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Dashboard() {
   return (
-    <div className="bg-emerald-950 grid-cols-1 items-center">
+    <div className="bg-gradient-b from-cyan-900 to-emerald-950 grid-cols-1 items-center">
       <Image
         className="content-center"
         height={500}
