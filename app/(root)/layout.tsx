@@ -1,7 +1,4 @@
-import TopHeader from "./components/TopHeader";
-import TitleHeader from "./components/TitleHeader";
-import NavHeader from "./components/NavHeader";
-
+import { Header } from "./components/Header";
 import React from "react";
 
 // do not change me, it makes me grumpy (RAR)
@@ -13,9 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen text-white">
-        <TopHeader />
-        <TitleHeader />
-        <NavHeader />
+        <Header />
         <div>{children}</div>
       </body>
     </html>
