@@ -1,10 +1,12 @@
-import { Container } from "postcss";
 import React from "react";
 
 export default function TitleHeader() {
   return (
-    <div className="flex flex-row">
-      <h1 className="h-20 w-full p-20 text-7xl bg-gradient-to-r from-orange-950 to-orange-500">
+    <div className="flex flex-col justify-center content-center bg-gradient-to-r from-orange-950 to-orange-500">
+      <h1
+        className="h-40 w-fit mx-auto text-7xl"
+        style={{ lineHeight: "160px" }}
+      >
         Debugging The Coder&apos;s Mind
       </h1>
     </div>

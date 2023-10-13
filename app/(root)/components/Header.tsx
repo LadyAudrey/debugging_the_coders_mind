@@ -4,7 +4,7 @@ import NavHeader from "./NavHeader";
 
 export function Header() {
   return (
-    <header className="relative flex flex-col">
+    <header className="w-full h-full">
       <TopHeader />
       <TitleHeader />
       <NavHeader />

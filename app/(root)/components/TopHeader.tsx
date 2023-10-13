@@ -4,7 +4,7 @@ import SignOutButton from "./SignOutButton";
 
 export default function TopHeader() {
   return (
-    <div className="sticky top-0 flex w-screen bg-emerald-950 h-20 justify-between">
+    <div className="sticky top-0 flex w-screen z-50 bg-emerald-950 justify-between">
       <div className="h-20 w-1/6 relative">
         <Image fill src={"/assets/Logo.svg"} alt="logo" />
       </div>
