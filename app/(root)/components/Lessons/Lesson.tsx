@@ -1,5 +1,5 @@
 import ControlBar from "./ControlBar";
-import testLesson from "@/app/LessonsTxt/testLesson.mdx";
+import TestLesson from "@/app/LessonsTxt/Classes_and_their_Uses.mdx";
 
 export default function Lesson() {
   return (
@@ -7,7 +7,7 @@ export default function Lesson() {
       {/* <ControlBar/> */}
       <div className="h-screen flex flex-col items-center">
         <div className="bg-orange-900 border-cyan-200 rounded-lg border-4">
-          <testLesson />
+          <TestLesson />
         </div>
       </div>
     </div>

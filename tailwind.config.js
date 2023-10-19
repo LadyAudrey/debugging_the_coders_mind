@@ -13,5 +13,5 @@ module.exports = {
       "two": "40%"
     }
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
