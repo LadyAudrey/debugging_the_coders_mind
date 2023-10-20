@@ -6,9 +6,9 @@ import IDEsandbox from "../IDEsandbox";
 
 export default function Lessons() {
   return (
-    <div className="min-top-40 h-full flex flex-col items-center bg-gradient-to-b from-cyan-900 to-emerald-950 text-white">
+    <div className="min-top-40 h-full flex flex-col items-center z-50 bg-gradient-to-b from-cyan-900 to-emerald-950 text-white">
       <ControlBar />
-      <div className="flex flex-row m-5 w-4/5 h-fit">
+      <div className="flex flex-row m-5 w-4/5 h-[1000px]">
         <Lesson />
         <Notes />
       </div>
