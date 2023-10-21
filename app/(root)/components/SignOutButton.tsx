@@ -14,5 +14,9 @@ export default function SignOutButton() {
       })
       .catch(console.log);
   }
-  return <button onClick={handleSignout}>Sign Out</button>;
+  return (
+    <button className="mr-5" onClick={handleSignout}>
+      Sign Out
+    </button>
+  );
 }

@@ -1,8 +1,8 @@
+import { Header } from "./components/Header";
+import React from "react";
 import TopHeader from "./components/TopHeader";
 import TitleHeader from "./components/TitleHeader";
 import NavHeader from "./components/NavHeader";
-
-import React from "react";
 
 // do not change me, it makes me grumpy (RAR)
 export default function RootLayout({
@@ -12,11 +12,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col">
-        <TopHeader />
-        <TitleHeader />
-        <NavHeader />
-        {children}
+      <body className="flex flex-col relative text-white">
+        <header className="absolute top-0 w-full h-full">
+          <TopHeader />
+          <TitleHeader />
+          <NavHeader />
+        </header>
+        <div className="mt-80">{children}</div>
       </body>
     </html>
   );

@@ -2,23 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* @layer components{
+    h1{
+        @apply text-5xl
+    }
+    h2{
+        @apply text-2xl m-3.5
+    }
+} */
 /* I want the below colors to be the theme variables, but it wasn't working, so I hard coded it for now */
 .card {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    margin: 10vh;
-    background-color: #553700;
-    border-radius: 25%;
-    border-color: #CBEEE5;
-    width: 25%;
+    margin: 5%;
+    border-radius: 5%;
+    width: 50%;
     height: 40vh;
     }
 
-h2 {
+/* h2 {
     font-size: xx-large;
-    color: #CBEEE5;
     margin: 5vh;
-}
+} */
