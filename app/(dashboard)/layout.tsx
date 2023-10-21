@@ -1,4 +1,5 @@
-import { Header } from "./components/Header";
+import "./dashboard.css";
+
 import React from "react";
 import TopHeader from "./components/TopHeader";
 import TitleHeader from "./components/TitleHeader";
