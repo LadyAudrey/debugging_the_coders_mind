@@ -13,13 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col relative text-white">
-        <header className="absolute top-0 w-full h-full">
-          <TopHeader />
-          <TitleHeader />
-          <NavHeader />
-        </header>
-        <div className="mt-80">{children}</div>
+      <body className="flex flex-col text-white">
+        <TopHeader />
+        <TitleHeader />
+        <NavHeader />
+        <div>{children}</div>
       </body>
     </html>
   );
