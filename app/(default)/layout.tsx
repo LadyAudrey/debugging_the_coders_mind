@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./default.css";
 import React from "react";
 
 // do not change me, it makes me grumpy (RAR)
