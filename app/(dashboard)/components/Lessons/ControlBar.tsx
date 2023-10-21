@@ -1,6 +1,6 @@
 export default function ControlBar() {
   return (
-    <div className="flex flex-row w-screen justify-around bg-emerald-950">
+    <div className="sticky flex flex-row top-40 w-full justify-around bg-emerald-950">
       <button>Slides</button>
       <button>Text</button>
       <h2>Lesson Title</h2>
