@@ -12,7 +12,7 @@ export function LoginForm() {
   }
 
   function getPublicURL() {
-    if (process.env.NODE_ENV === "development") {
+    if (process.env.NEXT_PUBLIC_VERCEL_ENV === "development") {
       return `http://${process.env.NEXT_PUBLIC_VERCEL_URL}/`;
     }
     if (process.env.NEXT_PUBLIC_VERCEL_ENV === "preview") {
@@ -23,11 +23,11 @@ export function LoginForm() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // OTP = one time password
+    // TODO: implement error handling
     const { data, error } = await supabase.auth.signInWithOtp({
       email: email,
       options: {
-        emailRedirectTo: `https://${process.env.VERCEL_URL}auth/callback`,
+        emailRedirectTo: `${getPublicURL()}auth/callback`,
       },
     });
   }
