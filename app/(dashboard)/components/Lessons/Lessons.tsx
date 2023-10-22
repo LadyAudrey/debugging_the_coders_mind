@@ -1,5 +1,5 @@
-import React from "react";
-import ControlBar from "./ControlBar";
+
+import ControlBar from "../../lessons/ControlBar";
 import Lesson from "./Lesson";
 import Notes from "../Notes";
 import IDEsandbox from "../IDEsandbox";
