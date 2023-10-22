@@ -1,5 +1,17 @@
-import Lessons from "../components/Lessons/Lessons";
+import React from "react";
+import ControlBar from "./ControlBar";
+import Lesson from "./Lesson";
+import Notes from "../components/Notes";
+import IDEsandbox from "../components/IDEsandbox";
 
-export default function page() {
-  return <Lessons />;
+export default function Lessons() {
+  return (
+    <div className="h-full flex flex-col items-center bg-gradient-to-b from-cyan-900 to-emerald-950 text-white">
+      <ControlBar />
+      <div className="flex flex-row m-5 w-4/5 h-[1000px]">
+        <Lesson />
+        <Notes />
+      </div>
+    </div>
+  );
 }
